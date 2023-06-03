@@ -10,9 +10,12 @@ def TestOneInput(data):
 
     text = fdp.ConsumeUnicodeNoSurrogates(1000)
     sep = fdp.ConsumeUnicodeNoSurrogates(1)
+    ml = fdp.ConsumeIntInRange(0, 1000)
+    wb = fdp.ConsumeBool()
+    so = fdp.ConsumeBool()
 
     try:
-        smart_truncate(text, separator=sep, max_length=30, word_boundary=True, save_order=True)
+        smart_truncate(text, separator=sep, max_length=ml, word_boundary=wb, save_order=so)
     except ValueError:
         pass
 
