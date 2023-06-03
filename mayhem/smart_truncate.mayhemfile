@@ -1,0 +1,6 @@
+project: python_slugify
+target: smart_truncate
+duration: 600
+cmds:
+    - cmd: /src/mayhem/fuzz_smart_truncate.py
+      libfuzzer: true

@@ -1,0 +1,6 @@
+project: python_slugify
+target: slugify
+duration: 600
+cmds:
+    - cmd: /src/mayhem/fuzz_slugify.py
+      libfuzzer: true
